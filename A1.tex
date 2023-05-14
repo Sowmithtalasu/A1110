@@ -19,6 +19,16 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} % loads  TikZ and tkz-base
 \usepackage{listings}
+\def\inputGnumericTable{}
+\usepackage[latin1]{inputenc}
+\usepackage{fullpage}
+\usepackage{color}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{ifthen}
 %
 %\usepackage{setspace}
 %\usepackage{gensymb}
@@ -327,18 +337,11 @@ $$Y=
     5, & \text{outcome of die is 5}\\
     6, & \text{outcome of die is 6}\\
   \end{cases}\\$$
-\begin{tabular}{|c|c|c|}
-\hline
-parameter & value & description\\\hline
-$X = 1$	& P(X=1)=$\frac{1}{2}$	&occurence of head	\\[6pt] \hline
-$X = 0$	& P(X=0) =$\frac{1}{2}$ &occurence of tail	\\[6pt]\hline
-$Y = 1$	& P(Y=1) =$\frac{1}{6}$	&die shows 1	\\[6pt] \hline
-$Y = 2$	& P(Y=2) =$\frac{1}{6}$	&die shows 2	\\[6pt]\hline
-$Y = 3$	& P(Y=3) =$\frac{1}{6}$	&die shows 3	\\[6pt]\hline
-$Y = 4$	& P(Y=4) =$\frac{1}{6}$	&die shows 4	\\[6pt]\hline
-$Y = 5$	& P(Y=5) =$\frac{1}{6}$	&die shows 5	\\[6pt]\hline
-$Y = 6$	& P(Y=6) =$\frac{1}{6}$	&die shows 6	\\[6pt]\hline
-\end{tabular}
+\begin{table}[h]
+  \label{table :1}
+  \input{tables/table.tex}
+  \caption{Final probabilities of the events.}
+  \end{table}
   
 So, the total number of outcomes are $(2).(6) = 12.$\\
 Now,
